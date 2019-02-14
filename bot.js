@@ -1,13 +1,13 @@
 if(!Discord) var Discord = require('discord.js');
 if(!client) var client = new Discord.Client();
-if(!prefix) var prefix = ".";
+if(!prefix) var prefix = "-";
 
-const adminprefix = ".";
-const devs = ['461432865754841088'];
+const adminprefix = "-.";
+const devs = ['533140382259871744'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
-if (message.content.startsWith(adminprefix + 'play')) {
+if (message.content.startsWith(adminprefix + 'pl')) {
   client.user.setGame(argresult)
     message.channel.sendMessage(`**:white_check_mark: | ${argresult}**`).then(message => {message.delete(6000)})
 } else 
