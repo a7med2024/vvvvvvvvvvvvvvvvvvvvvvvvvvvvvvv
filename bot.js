@@ -3,7 +3,7 @@ if(!client) var client = new Discord.Client();
 if(!prefix) var prefix = "-";
 
 const adminprefix = "-";
-const devs = ['533140382259871744'];
+const devs = ['514041065041297421'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
@@ -25,4 +25,4 @@ if (message.content.startsWith(adminprefix + 'st')) {
 }
 });
 
-client.login(process.env.BOT_TOKE);
+client.login(process.env.BOT_TOKEN);
